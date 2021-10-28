@@ -1,8 +1,8 @@
-from django.urls import path
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    path(r'^$', views.hello_django, name='hello_django'),
+    url(r'^$', views.hello_django, name='hello_django'),
 ]
 
 
