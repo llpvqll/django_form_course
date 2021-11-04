@@ -1,0 +1,51 @@
+    header
+        {
+            background : gray;
+            height : 200px;
+        }
+        header img
+        {
+            float: left;
+        }
+        nav a {
+            color: white;
+            font-size: 28px;
+            float: right;
+            margin-right: 100px;
+            transition: color .5s
+        }
+        a:hover {
+            color: black;
+        }
+        nav {
+            padding-top:80px;
+
+        }
+        .body_img {
+        float: right;
+        padding-right: 120px;
+        }
+        aside {
+            color: white;
+            background: black;
+            padding: 10px;
+            width: 200px;
+            float: right;
+    }
+    ul li
+    {
+        margin-top:15px;
+    }
+
+    footer
+    {   display  :block;
+        position : fixed;
+        bottom: 0px;
+        background : black ;
+        color: white;
+        width : 100%;
+    }
+    div
+    {
+        font-size: 24px;
+    }

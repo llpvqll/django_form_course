@@ -1,8 +1,11 @@
 from . import views
-from django.urls import path
+from django.conf.urls import url, include
 
 urlpatterns = [
-    path('', views.index, name='index')
+    url(r'^$', views.index),
+    url(r'^batman$', views.batman),
+    url(r'^joker$', views.joker),
+    url(r'^batman_car', views.batman_car),
 ]
 
 

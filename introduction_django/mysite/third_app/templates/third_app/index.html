@@ -1,12 +1,69 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Third app</title>
+    <title>{% block title %}Batman Dark Knight{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 </head>
 <body>
+    <header>
+        <a href="/third_app"><img height="150" src="https://www.pngall.com/wp-content/uploads/2016/03/Batman-Logo-PNG.png" alt=""></a>
+        <nav>
+            <a href="joker">Joker actor</a>
+            <a href="batman_car">Batman car</a>
+            <a href="batman">Batman actor</a>
+        </nav>
+    </header>
+    {% include 'third_app/aside.html' %}
 
-    <div style="color:{{title}}"><h1>Title</h1></div>
+    {% block body %}
+        <div>
+            <h1 align="center">Batman Dark Knight</h1>
+            <img class="body_img" src="https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg" alt="">
+            <p>
+                The Dark Knight is a 2008 superhero film directed, produced, and co-written by Christopher Nolan.<br>
+                Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark<br>
+                Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael<br>
+                Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film,<br>
+                Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent<br>
+                (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic<br>
+                mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into anarchy.<br>
+                <br>
+                Nolan's inspiration for the film was the Joker's comic book debut in 1940, the 1988 graphic novel The<br>
+                Killing Joke, and the 1996 series The Long Halloween, which retold Harvey Dent's origin. The "Dark Knight"<br>
+                nickname was first applied to Batman in Batman #1 (1940), in a story written by Bill Finger.[4][5] The<br>
+                Dark Knight was filmed primarily in Chicago, as well as in several other locations in the United States,<br>
+                the United Kingdom, and Hong Kong. The film was the first mainstream feature to partially utilize IMAX 70<br>
+                mm cameras, with Nolan using them for 28 minutes of the film, including the Joker's first appearance.<br>
+                Warner Bros. initially created a viral marketing campaign for The Dark Knight, developing promotional<br>
+                websites and trailers highlighting screenshots of Ledger as the Joker. Ledger died on January 22, 2008,<br>
+                some months after he completed filming and six months before the film's release from a toxic combination<br>
+                of prescription drugs, leading to intense attention from the press and movie-going public.<br>
+                <br>
+                Considered one of the best films of its decade and one of the greatest and most influential superhero<br>
+                films of all time, the film received critical acclaim for its screenplay, visual effects, musical score,<br>
+                mature themes, performances (particularly Ledger's), cinematography, action sequences and direction. The<br>
+                film also set numerous records during its theatrical run.[6] The Dark Knight appeared on 287 critics'<br>
+                top-ten lists, more than any other film of 2008 with the exception of WALL-E, and more critics (77) named<br>
+                The Dark Knight the best film released that year.[7] With over $1 billion in revenue worldwide, it became<br>
+                the fourth-highest-grossing film at the time, and highest-grossing film of 2008; it also set the record<br>
+                for highest-grossing domestic opening with $158 million, a record it held for three years.[8] At the 81st<br>
+                Academy Awards, the film received eight nominations; it won the award for Best Sound Editing and Ledger<br>
+                was posthumously awarded Best Supporting Actor.[9] In 2020, the film was selected for preservation in the<br>
+                United States National Film Registry by the Library of Congress for being "culturally, historically, or<br>
+                aesthetically significant",[10] becoming the second superhero film after 1978's Superman to earn the honor.<br>
+                The Dark Knight Rises, the final film in the trilogy, was released in 2012.<br>
+                <br>
+                <br>
+            </p>
+        </div>
+    {% endblock %}
 
+<footer>
+    Batman Dark Knight<br>
+    Very Interesting Film
+
+</footer>
 </body>
 </html>
