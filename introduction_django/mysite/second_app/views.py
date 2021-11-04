@@ -3,7 +3,7 @@ from django.http import HttpResponse, response
 from django.template import loader
 from .models import Question
 from django.http import Http404
-from django.shortcuts import get_object_of_404, render
+from django.shortcuts import get_object_or_404, render
 # Create your views here.
 
 
@@ -16,7 +16,7 @@ def index(request):
 
 
 def detail(request, question_id):
-    question = get_object_of_404(Question, pk=question_id)
+    question = get_object_or_404(Question, pk=question_id)
     return render(request, 'second_app/detail.html', {'question': question})
 
 
