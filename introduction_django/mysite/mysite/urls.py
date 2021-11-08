@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url('^forms/', include('forms.urls')),
-    url('^fourth_app/', include('fourth_app.urls')),
-    url('^third_app/', include('third_app.urls')),
-    url('second_app/', include('second_app.urls')),
+    url('^orm/$', include('orm.urls')),
+    url('^forms/$', include('forms.urls')),
+    url('^fourth_app/$', include('fourth_app.urls')),
+    url('^third_app/$', include('third_app.urls')),
+    url('^second_app/$', include('second_app.urls')),
     url('admin/', admin.site.urls),
 ]
 
