@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orm</title>
+</head>
+<body>
+
+<h1>All users</h1>
+
+{% block content %}
+    <table border="1" cellpadding="5px">
+        <tr style="background: blue; color:white;">
+            <td>ID</td>
+            <td>Name</td>
+            <td>Surname</td>
+            <td>Birthday</td>
+            <td>Company</td>
+            <td>Salary</td>
+        </tr>
+
+        {% for human in all_humans %}
+    <tr>
+        <td>{{human.id}}</td>
+        <td>{{human.name}}</td>
+        <td>{{human.surname}}</td>
+        <td>{{human.birth}}</td>
+        <td>{{human.company}}</td>
+        <td>{{human.position}}</td>
+        <td>{{human.language}}</td>
+        <td>{{human.salary}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
+</body>
+</html>

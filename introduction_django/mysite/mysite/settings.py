@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'orm_less.apps.OrmLessConfig',
     'forms.apps.FormsConfig',
     'fourth_app.apps.FourthAppConfig',
     'third_app.apps.ThirdAppConfig',
