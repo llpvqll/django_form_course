@@ -1,10 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Auth</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 </head>
 <body>
+
+{% if user.is_authenticated  %}
+<a href="logout">выйти({{user.username}})</a>
+{% else %}
+<a href="register">Регистрация на сайте</a>
+<a href="login">Авторизация</a>
+{% endif %}
+
+{% for elem in humans %}
+<p> Name  - {{elem.name}}</p>
+<p>Surname - {{elem.surname}}</p>
+<p>Company - {{elem.company}}</p>
+{% endfor %}
 
 </body>
 </html>
