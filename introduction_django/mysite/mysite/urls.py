@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
+    url('^auth_user', include('auth_user.urls')),
     url('^orm-less/', include('orm_less.urls')),
     url('^forms/', include('forms.urls')),
     url('^fourth_app/', include('fourth_app.urls')),
