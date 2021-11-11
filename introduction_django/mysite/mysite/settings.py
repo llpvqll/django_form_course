@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ajax_app.apps.AjaxAppConfig',
     'auth_user.apps.AuthUserConfig',
     'orm_less.apps.OrmLessConfig',
     'forms.apps.FormsConfig',
