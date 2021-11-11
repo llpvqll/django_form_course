@@ -21,3 +21,13 @@ class Human(models.Model):
     def __str__(self):
         return 'Имя  - {0} , Фамилия -  {1} , Компания - {2}'.format(self.name, self.surname, self.company)
 
+    def dict(self):
+        obj = {
+            'name': self.name,
+            'surname': self.surname,
+            'birth': self.birth,
+            'company': self.company,
+            'salary': self.salary,
+        }
+        return obj
+

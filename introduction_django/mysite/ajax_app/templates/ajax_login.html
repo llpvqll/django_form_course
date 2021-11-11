@@ -1,0 +1,17 @@
+{% extends 'ajax_index.html' %}
+
+{% block login %}
+    <form action="" method="post">
+      {% csrf_token %}
+
+      {% for field in form %}
+      <label>{{field.label}}</label>
+      <p>{{field}}</p>
+        {% if field.errors %}
+          <p>{{field.errors}}</p>
+        {% endif %}
+      {% endfor %}
+      <button type="submit">Enter</button>
+    </form>
+
+{% endblock %}
