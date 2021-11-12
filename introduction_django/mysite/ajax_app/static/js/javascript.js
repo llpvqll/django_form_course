@@ -1,32 +1,31 @@
-$(document).ready(function(){
-    $('#add-human').submit(function(e)
-        e.preventDefault();
-        $.ajax({
-            method: "POST",
-            url: $(this).attr('action'),
-            data:{
-                'name': $('#id_name').val(),
-                'surname': $('#id_surname').val(),
-                'birth': $('#id_birth').val(),
-                'company': $('#id_company').val(),
-                'salary': $('#id_salary').val(),
-
-            },
-            dataType: 'json',
-            success: function(data){
-                $('form').reset();
-                var table_row = '<tr><td>' +
-                data.name + "</td><td>" + data.surname + "</td><td>" +
-                data.birth + "</td><td>" + data.company + "</td><td>" +
-                data.salary + "</td></tr>";
-
-                $('table').append(table_row);
-            }
-        })
-    })
-})
-
  $(document).ready(function(){
+        $('#add-human').submit(function(e){
+            e.preventDefault();
+             $.ajax({
+                method : "POST" ,
+                url : $(this).attr('action'),
+                data: {
+                    'name' : $('#id_name').val(),
+                    'surname' :  $('#id_surname').val(),
+                    'birth' :  $('#id_birth').val(),
+                    'company' :  $('#id_company').val(),
+                    'salary' :  $('#id_salary').val(),
+                },
+                dataType: 'json',
+                success: function(data){
+                     $('form')[0].reset();
+                     var table_row = '<tr><td>' +
+                       data.name + '</td><td>' + data.surname + '</td><td>' +
+                       data.birth + '</td><td>' + data.company + '</td><td>' +
+                       data.salary + '</td></tr>';
+
+                        $('table').append(table_row);
+                }
+             })
+        })
+
+
+
 
     function ajax_setup(e){
     e.preventDefault();
@@ -56,9 +55,7 @@ $(document).ready(function(){
 
         $('#show_all').click(ajax_setup);
         $('#close_all').click(ajax_setup);
- })
 
- $(document).ready(function(){
     $('#id_email').on('blur' , validate);
     function validate(){
       var email  =  $('#id_email').val();
@@ -88,4 +85,3 @@ $(document).ready(function(){
       })
     }
   })
-

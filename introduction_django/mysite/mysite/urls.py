@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url('^ajax_app/', include('ajax_app.urls')),
+    url(r'^ajax_app/', include('ajax_app.urls')),
     url('^auth_user/', include('auth_user.urls')),
     url('^orm-less/', include('orm_less.urls')),
     url('^forms/', include('forms.urls')),

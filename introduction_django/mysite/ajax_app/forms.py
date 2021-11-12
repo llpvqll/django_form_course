@@ -7,9 +7,9 @@ from orm_less.models import Human
 class UserCreateForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
-    class Mete:
+    class Meta:
         model = User
-        field = ("username", "email", "password1", "password2")
+        fields = ("username", "email", "password1", "password2")
 
     def save(self, commit=True):
         user = super(UserCreateForm, self).save(commit=False)

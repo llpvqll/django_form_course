@@ -29,8 +29,6 @@
         <td>Фамилия</td>
         <td>Дата рождения</td>
         <td>Компания</td>
-        <td>Должность</td>
-        <td>Язык программирования</td>
         <td>Зарплата</td>
        </tr>
 {% for elem in humans %}
@@ -39,8 +37,6 @@
         <td>{{elem.surname}}</td>
         <td>{{elem.birth}}</td>
         <td>{{elem.company}}</td>
-        <td>{{elem.position}}</td>
-        <td>{{elem.language}}</td>
         <td>{{elem.salary}}</td>
     </tr>
 {% endfor %}
@@ -56,7 +52,8 @@
     </form>
 <a href = 'show_all' id = 'show_all' >Show all Humans</a>
 <a href = 'close_all' id = 'close_all' >Close all Humans</a>
-{% endif %}
+
+    {% endif %}
 
 {% endblock %}
 </body>

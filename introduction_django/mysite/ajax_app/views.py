@@ -92,8 +92,10 @@ def close_all(request):
     context = {
         'elements': list(close_elem)
     }
+    return JsonResponse(context)
 
 
+@csrf_exempt
 def add_human(request):
     if request.POST:
         if request.is_ajax():
